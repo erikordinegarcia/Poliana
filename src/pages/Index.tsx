@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import FeaturedSection from "@/components/FeaturedSection";
+import CatalogSection from "@/components/CatalogSection";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = useCallback((query: string) => {
+    setSearchQuery(query);
+    // Navigate to catalog when searching
+    const catalogSection = document.getElementById("catalogo");
+    if (catalogSection) {
+      catalogSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  const handleNavigate = useCallback((section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header onSearch={handleSearch} onNavigate={handleNavigate} />
+      <main>
+        <Hero onNavigate={handleNavigate} />
+        <FeaturedSection />
+        <CatalogSection searchQuery={searchQuery} />
+        <AboutSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 };

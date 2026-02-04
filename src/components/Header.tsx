@@ -33,7 +33,8 @@ const Header = ({ onSearch, onNavigate }: HeaderProps) => {
             onClick={() => onNavigate('hero')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-20 w-auto" />
+
             <span className="font-serif text-xl md:text-2xl font-medium text-foreground">
               Polimel Books Shelf
             </span>

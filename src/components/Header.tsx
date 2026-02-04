@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Menu, Search, X, BookOpen } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useState } from 'react';
+import { Menu, Search, X, BookOpen } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header = ({ onSearch, onNavigate }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,10 +18,10 @@ const Header = ({ onSearch, onNavigate }: HeaderProps) => {
   };
 
   const menuItems = [
-    { label: "Catálogo", section: "catalogo" },
-    { label: "Destaques", section: "destaques" },
-    { label: "Sobre", section: "sobre" },
-    { label: "Contato", section: "contato" },
+    { label: 'Catálogo', section: 'catalogo' },
+    { label: 'Destaques', section: 'destaques' },
+    { label: 'Sobre', section: 'sobre' },
+    { label: 'Contato', section: 'contato' },
   ];
 
   return (
@@ -29,13 +29,13 @@ const Header = ({ onSearch, onNavigate }: HeaderProps) => {
       <div className="container-wide mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button 
-            onClick={() => onNavigate("hero")}
+          <button
+            onClick={() => onNavigate('hero')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <BookOpen className="h-6 w-6 md:h-7 md:w-7 text-primary" />
+            <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
             <span className="font-serif text-xl md:text-2xl font-medium text-foreground">
-              Sabor em Páginas
+              Polimel Books Shelf
             </span>
           </button>
 

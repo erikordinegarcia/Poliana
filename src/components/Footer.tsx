@@ -1,5 +1,3 @@
-import { BookOpen } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -8,18 +6,15 @@ const Footer = () => {
       <div className="container-narrow mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center text-center space-y-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <BookOpen className="h-6 w-6" />
-            <span className="font-serif text-xl font-medium">
-              Sabor em Páginas
-            </span>
+          <div className="flex items-center justify-center">
+            <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
           </div>
 
           {/* Info Text */}
           <div className="space-y-2 text-sm text-background/70">
             <p>Curadoria especializada em livros de receitas</p>
             <p className="flex items-center justify-center gap-1">
-              Compras realizadas com segurança via{" "}
+              Compras realizadas com segurança via{' '}
               <span className="font-medium text-background">Mercado Livre</span>
             </p>
           </div>

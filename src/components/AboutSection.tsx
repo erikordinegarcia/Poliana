@@ -31,22 +31,22 @@ const AboutSection = () => {
             Quem Somos
           </p>
           <h2 className="text-headline text-foreground">
-            Sobre a Sabor em Páginas
+            Sobre a Polimel Books Shelf
           </h2>
         </div>
 
         {/* Main Content */}
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-body text-muted-foreground leading-relaxed">
-            A <strong className="text-foreground">Sabor em Páginas</strong> nasceu do amor pelos livros de receitas 
-            e pela culinária. Somos uma curadoria especializada em encontrar os melhores 
-            títulos gastronômicos — desde clássicos atemporais até edições raras e 
-            colecionáveis. Nossa missão é conectar apaixonados por gastronomia aos 
+            A <strong className="text-foreground">Polimel Books Shelf</strong> nasceu do amor pelos livros de receitas
+            e pela culinária. Somos uma curadoria especializada em encontrar os melhores
+            títulos gastronômicos — desde clássicos atemporais até edições raras e
+            colecionáveis. Nossa missão é conectar apaixonados por gastronomia aos
             livros que farão diferença em suas cozinhas.
           </p>
           <p className="text-body text-muted-foreground leading-relaxed mt-4">
-            Para sua segurança e praticidade, todas as compras são realizadas 
-            diretamente no Mercado Livre, onde você conta com proteção ao comprador, 
+            Para sua segurança e praticidade, todas as compras são realizadas
+            diretamente no Mercado Livre, onde você conta com proteção ao comprador,
             diversas opções de pagamento e entrega em todo o Brasil.
           </p>
         </div>

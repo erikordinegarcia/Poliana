@@ -6,6 +6,7 @@ import CatalogSection from "@/components/CatalogSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,6 +38,10 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppFloat
+        phone="+5521999999999"
+        message="Olá! Gostaria de saber mais sobre os livros de receitas disponíveis."
+      />
     </div>
   );
 };

@@ -21,7 +21,7 @@ const BookCard = ({ book }: BookCardProps) => {
         <img
           src={book.image}
           alt={book.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
 
@@ -34,14 +34,14 @@ const BookCard = ({ book }: BookCardProps) => {
       <div className="flex flex-col flex-1 p-5">
         {/* Title & Author */}
         <div>
-          <h3 className="font-serif text-lg font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-serif text-lg font-medium text-foreground group-hover:text-primary transition-colors">
             {book.title}
           </h3>
           <p className="text-caption mt-1">{book.author}</p>
         </div>
 
         {/* Description */}
-        <p className="mt-3 text-sm text-muted-foreground line-clamp-3">{book.description}</p>
+        <p className="mt-3 text-sm text-muted-foreground break-words">{book.description}</p>
 
         {/* Price & CTA */}
         <div className="mt-auto pt-4 flex items-center justify-between gap-3">

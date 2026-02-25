@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { books } from "@/data/books";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const paymentOptions = [
@@ -26,6 +26,11 @@ const Checkout = () => {
       style: "currency",
       currency: "BRL",
     }).format(price);
+
+  const selectedPaymentLabel = useMemo(
+    () => paymentOptions.find((option) => option.value === paymentMethod)?.label ?? "forma de pagamento",
+    [paymentMethod]
+  );
 
   if (!book) {
     return (
@@ -102,20 +107,23 @@ const Checkout = () => {
                 className="w-full"
                 onClick={() => {
                   toast({
-                    title: "Pagamento selecionado",
-                    description: `Você escolheu ${paymentOptions.find((option) => option.value === paymentMethod)?.label}.`,
+                    title: "Pedido criado com sucesso",
+                    description: `Pagamento via ${selectedPaymentLabel}. Em produção, aqui chamamos a API para gerar a cobrança.`,
                   });
                 }}
               >
-                Confirmar forma de pagamento
+                Finalizar compra
               </Button>
 
-              <Button asChild variant="outline" className="w-full">
-                <a href={book.mercadoLivreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2">
-                  Finalizar no Mercado Livre
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
+              <div className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
+                <p className="font-medium text-foreground inline-flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-primary" />
+                  Próximo passo para pagamento real
+                </p>
+                <p className="mt-2">
+                  Integre este botão com seu backend para criar o pedido e iniciar o pagamento (Pix, cartão ou boleto) no seu provedor escolhido.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>

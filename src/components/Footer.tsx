@@ -14,8 +14,7 @@ const Footer = () => {
           <div className="space-y-2 text-sm text-background/70">
             <p>Curadoria especializada em livros de receitas</p>
             <p className="flex items-center justify-center gap-1">
-              Compras realizadas com segurança via{' '}
-              <span className="font-medium text-background">Mercado Livre</span>
+              Checkout próprio com segurança e praticidade
             </p>
           </div>
 

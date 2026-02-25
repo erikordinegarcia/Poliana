@@ -30,7 +30,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
           {/* Description */}
           <p className="text-body text-muted-foreground max-w-xl mx-auto text-lg">
             Uma seleção cuidadosa dos melhores livros de receitas, de clássicos atemporais a edições
-            raras. Compra segura e prática via Mercado Livre.
+            raras. Compra segura e prática com checkout direto no site.
           </p>
 
           {/* CTA Button */}

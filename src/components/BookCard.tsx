@@ -1,6 +1,6 @@
-import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Book } from '@/data/books';
+import { Link } from 'react-router-dom';
 
 interface BookCardProps {
   book: Book;
@@ -54,15 +54,12 @@ const BookCard = ({ book }: BookCardProps) => {
             size="sm"
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            <a
-              href={book.mercadoLivreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={`/compra/${book.id}`}
               className="inline-flex items-center gap-1.5"
             >
-              Ir para compra
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
+              Comprar
+            </Link>
           </Button>
         </div>
       </div>

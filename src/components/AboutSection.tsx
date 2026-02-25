@@ -12,7 +12,7 @@ const AboutSection = () => {
       icon: ShieldCheck,
       title: "Compra Segura",
       description:
-        "Todas as compras são finalizadas no Mercado Livre, garantindo segurança, proteção ao comprador e facilidade de pagamento.",
+        "Checkout próprio com opções de pagamento e validações para você finalizar seu pedido com segurança.",
     },
     {
       icon: Heart,
@@ -45,9 +45,7 @@ const AboutSection = () => {
             livros que farão diferença em suas cozinhas.
           </p>
           <p className="text-body text-muted-foreground leading-relaxed mt-4">
-            Para sua segurança e praticidade, todas as compras são realizadas
-            diretamente no Mercado Livre, onde você conta com proteção ao comprador,
-            diversas opções de pagamento e entrega em todo o Brasil.
+            Nossa experiência de compra agora é feita no próprio site, com seleção de forma de pagamento e evolução para integração completa com gateway.
           </p>
         </div>
 

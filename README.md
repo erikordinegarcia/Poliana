@@ -71,3 +71,8 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Checkout e banco de dados (PostgreSQL)
+
+- Script de criação das tabelas: `db/poliana_store.sql`
+- Guia de integração (pgAdmin + API): `docs/pagamentos-postgres.md`

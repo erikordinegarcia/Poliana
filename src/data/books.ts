@@ -6,7 +6,6 @@ export interface Book {
   price: number;
   description: string;
   image: string;
-  mercadoLivreUrl: string;
   featured?: boolean;
 }
 
@@ -35,7 +34,6 @@ export const books: Book[] = [
     description:
       'COLOCAR',
     image: bookImages['/src/assets/books/Book_image1.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
     featured: true,
   },
   {
@@ -46,7 +44,6 @@ export const books: Book[] = [
     price: 149.9,
     description: 'Receitas caseiras e técnicas artesanais para fazer pães incríveis em casa.',
     image: bookImages['/src/assets/books/Book_image2.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
     featured: true,
   },
   {
@@ -57,7 +54,6 @@ export const books: Book[] = [
     price: 399.9,
     description: 'Guia completo com todas as técnicas culinárias da prestigiada escola francesa.',
     image: bookImages['/src/assets/books/Book_image3.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
     featured: true,
   },
   {
@@ -69,7 +65,6 @@ export const books: Book[] = [
     description:
       'Obra-prima do chef Thomas Keller com receitas do lendário restaurante três estrelas Michelin.',
     image: bookImages['/src/assets/books/Book_image4.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
     featured: true,
   },
   {
@@ -80,7 +75,6 @@ export const books: Book[] = [
     price: 119.9,
     description: 'Receitas afetivas de doces brasileiros que marcaram gerações.',
     image: bookImages['/src/assets/books/Book_image5.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '6',
@@ -91,7 +85,6 @@ export const books: Book[] = [
     description:
       'O guia definitivo para pães de fermentação natural da padaria mais famosa de São Francisco.',
     image: bookImages['/src/assets/books/Book_image6.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '7',
@@ -102,7 +95,6 @@ export const books: Book[] = [
     description:
       'Domine os quatro elementos essenciais da boa cozinha com este bestseller ilustrado.',
     image: bookImages['/src/assets/books/Book_image7.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '8',
@@ -112,7 +104,6 @@ export const books: Book[] = [
     price: 4500.0,
     description: 'Coleção enciclopédica de 6 volumes sobre a ciência e arte da culinária moderna.',
     image: bookImages['/src/assets/books/Book_image8.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '9',
@@ -123,7 +114,6 @@ export const books: Book[] = [
     description:
       'Com mais de 35 anos de experiência, Ramon Morató apresenta um guia completo sobre chocolate, dividido em quatro partes: Chocolate como Produto, Confeitaria, Chocolate e Restaurante. São mais de 416 páginas e 200 receitas, com fotos passo a passo, estudos sobre mousses, trufas, recheios e técnicas essenciais de fabricação. O livro também ensina a equilibrar bombons, controlar atividade de água, evitar problemas de conservação e dominar temperagem e acabamento.',
     image: bookImages['/src/assets/books/Book_image9.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '10',
@@ -134,7 +124,6 @@ export const books: Book[] = [
     description:
       'Um livro de referência dedicado ao chocolate, assinado por Christophe Felder. Com 448 páginas e 250 receitas, a obra ensina técnicas e preparações passo a passo para dominar o uso do chocolate, desde bases essenciais até criações sofisticadas.',
     image: bookImages['/src/assets/books/Book_image10.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '11',
@@ -145,7 +134,6 @@ export const books: Book[] = [
     description:
       'Bachour Gastro, de Antonio Bachour, apresenta 52 criações inéditas doces e salgadas em formato de até duas mordidas, com receitas, fotos passo a passo e dicas do autor.Dividido em três partes Inspiração, Criação e Brunch o livro revisita clássicos da confeitaria, traz combinações criativas influenciadas por diferentes culturas e inclui preparações salgadas modernas.',
     image: bookImages['/src/assets/books/Book_image11.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '12',
@@ -156,7 +144,6 @@ export const books: Book[] = [
     description:
       'Em Signature Viennoiseries, Johan Martin compartilha sua visão técnica e contemporânea sobre a arte da viennoiserie, destacando a precisão e o rigor necessários para dominar essa especialidade. O livro bilíngue (francês e inglês) reúne 50 receitas exclusivas, dos clássicos croissants e pains au chocolat a criações modernas e veganas. Inclui QR codes com vídeos demonstrativos das principais técnicas, tornando o aprendizado mais prático e completo.',
     image: bookImages['/src/assets/books/Book_image12.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '13',
@@ -167,7 +154,6 @@ export const books: Book[] = [
     description:
       'Advanced Bread & Pastry apresenta conceitos, técnicas e fórmulas de nível avançado para quem deseja se tornar padeiro ou confeiteiro profissional. O livro reúne, em um único volume, panificação complexa, viennoiserie e confeitaria, com explicações detalhadas e estratégias para solucionar problemas técnicos.',
     image: bookImages['/src/assets/books/Book_image13.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '14',
@@ -178,7 +164,6 @@ export const books: Book[] = [
     description:
       'O livro apresenta os fundamentos do trabalho com chocolate, abordando equipamentos, ingredientes e técnicas básicas. Em seguida, ensina receitas e decorações para pequenos doces, além de técnicas avançadas para criar grandes peças artísticas, como esculturas, flores e estruturas de suporte. Também orienta sobre desenvolvimento de peças para competições.',
     image: bookImages['/src/assets/books/Book_image14.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '15',
@@ -189,7 +174,6 @@ export const books: Book[] = [
     description:
       'The Pastry Alphabet é um guia essencial criado pelos chefs da Cacao Barry®, reunindo receitas básicas que servem de base para doces clássicos e criações autorais. Dividido em quatro blocos Biscuits, Crèmes & Mousses, Glaçages e Pâtes apresenta receitas ilustradas com características, usos, medidas em gramas, dicas, armazenamento, alérgenos e explicações científicas.',
     image: bookImages['/src/assets/books/Book_image15.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '50',
@@ -200,7 +184,6 @@ export const books: Book[] = [
     description:
       'A segunda edição de The Science of Chocolate foi revisada e atualizada para explicar todo o processo de fabricação do chocolate, do cultivo do cacau à venda final. O livro explora a ciência por trás da produção, com novos capítulos sobre nutrição, resistência ao calor e técnicas como a criação de bolhas em barras. Inclui ainda experimentos práticos para demonstrar os princípios físicos e químicos envolvidos.',
     image: bookImages['/src/assets/books/Book_image50.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '17',
@@ -211,7 +194,6 @@ export const books: Book[] = [
     description:
       'Christophe Felder e Camille Lesecq compartilham seu conhecimento com explicações claras e didáticas.O livro reúne 50 receitas incluindo 10 bases essenciais e 40 tortas com técnicas passo a passo para massas, cremes e decorações. Sabores como chocolate, mirtilo com baunilha, pistache com framboesa e speculoos compõem galettes crocantes, macias ou cremosas, em combinações clássicas e criativas.',
     image: bookImages['/src/assets/books/Book_image17.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '18',
@@ -222,7 +204,6 @@ export const books: Book[] = [
     description:
       'Mais de 100 receitas de tortas doces e salgadas assinadas por dois renomados chefs franceses.O livro reúne clássicos da confeitaria francesa como tarte Tatin e quiche Lorraine além de versões modernas e criativas. Dividido em seções de salgados, doces e preparo da massa, traz instruções claras, dicas práticas e fotografias de página inteira.',
     image: bookImages['/src/assets/books/Book_image18.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '19',
@@ -233,7 +214,6 @@ export const books: Book[] = [
     description:
       'Este livro reúne 100 receitas irresistíveis de tortas e tartes, doces e salgadas, organizadas por tamanho de tortinhas individuais a versões grandes para ocasiões especiais.Traz clássicos como maçã, frutas vermelhas e chocolate, além de opções modernas, empanadas, galettes e receitas com acabamento decorativo. Também inclui dicas essenciais e bases de massas para facilitar o preparo.',
     image: bookImages['/src/assets/books/Book_image19.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '20',
@@ -244,7 +224,6 @@ export const books: Book[] = [
     description:
       'Pie Academy, de Ken Haedrich, é um guia completo para dominar a arte das tortas. O livro ensina desde a preparação da massa com diferentes farinhas e gorduras até técnicas de acabamento, além de trazer 255 receitas que vão das clássicas tortas de maçã e abóbora a versões com frutas, creme e opções salgadas.',
     image: bookImages['/src/assets/books/Book_image20.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '21',
@@ -255,7 +234,6 @@ export const books: Book[] = [
     description:
       'Best-seller do New York Times, The Book on Pie, de Erin Jeanne McDowell, é um guia completo para fazer tortas perfeitas. O livro ensina desde o preparo da massa com dicas de armazenamento, congelamento e decoração até receitas variadas, que vão das clássicas tortas de maçã e abóbora a versões criativas doces e salgadas.',
     image: bookImages['/src/assets/books/Book_image21.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '22',
@@ -266,7 +244,6 @@ export const books: Book[] = [
     description:
       'Fazer tortas pode ser simples e divertido. Em Art of the Pie, Kate McDermott ensina, passo a passo, como preparar massas perfeitas (inclusive sem glúten) e recheios doces e salgados, com receitas que vão da clássica maçã à torta de frango. Edição em inglês.',
     image: bookImages['/src/assets/books/Book_image22.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '23',
@@ -277,7 +254,6 @@ export const books: Book[] = [
     description:
       'Livro inspirado na confeitaria Sister Pie, em Detroit, comandada por Lisa Ludwinski. Reúne 75 receitas de tortas doces e salgadas, com fotos e ilustrações encantadoras.Edição em inglês, capa dura.',
     image: bookImages['/src/assets/books/Book_image23.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '24',
@@ -287,7 +263,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image24.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '25',
@@ -297,7 +272,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image25.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '26',
@@ -307,7 +281,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image26.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '27',
@@ -317,7 +290,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image27.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '28',
@@ -327,7 +299,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image28.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '29',
@@ -337,7 +308,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image29.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '30',
@@ -347,7 +317,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image30.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '31',
@@ -357,7 +326,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image31.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '32',
@@ -367,7 +335,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image32.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '33',
@@ -377,7 +344,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image33.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '34',
@@ -387,7 +353,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image34.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '35',
@@ -397,7 +362,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image35.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '36',
@@ -407,7 +371,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image36.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '37',
@@ -417,7 +380,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image37.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '38',
@@ -427,7 +389,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image38.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '39',
@@ -437,7 +398,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image39.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '40',
@@ -447,7 +407,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image40.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '41',
@@ -457,7 +416,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image41.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '42',
@@ -467,7 +425,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image42.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '43',
@@ -477,7 +434,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image43.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '44',
@@ -487,7 +443,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image44.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '45',
@@ -497,7 +452,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image45.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '46',
@@ -507,7 +461,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image46.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '47',
@@ -517,7 +470,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image47.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '48',
@@ -527,7 +479,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image48.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
   {
     id: '49',
@@ -537,7 +488,6 @@ export const books: Book[] = [
     price: 650.0,
     description: 'A obra fundamental da culinária clássica francesa, edição original restaurada.',
     image: bookImages['/src/assets/books/Book_image49.jpeg'],
-    mercadoLivreUrl: 'https://www.mercadolivre.com.br',
   },
 ];
 

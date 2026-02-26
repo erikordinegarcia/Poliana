@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useMemo, useState } from "react";
+import { createOrder } from "@/lib/checkout-api";
 import { useToast } from "@/hooks/use-toast";
 
 const paymentOptions = [
@@ -17,7 +18,9 @@ const paymentOptions = [
 const Checkout = () => {
   const { id } = useParams();
   const { toast } = useToast();
-  const [paymentMethod, setPaymentMethod] = useState<(typeof paymentOptions)[number]["value"]>("pix");
+  const [paymentMethod, setPaymentMethod] =
+    useState<(typeof paymentOptions)[number]["value"]>("pix");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const book = books.find((item) => item.id === id);
 
@@ -28,7 +31,9 @@ const Checkout = () => {
     }).format(price);
 
   const selectedPaymentLabel = useMemo(
-    () => paymentOptions.find((option) => option.value === paymentMethod)?.label ?? "forma de pagamento",
+    () =>
+      paymentOptions.find((option) => option.value === paymentMethod)?.label ??
+      "forma de pagamento",
     [paymentMethod]
   );
 
@@ -66,7 +71,9 @@ const Checkout = () => {
           <Card>
             <CardHeader>
               <CardTitle>Resumo da compra</CardTitle>
-              <CardDescription>Confira os dados do produto selecionado.</CardDescription>
+              <CardDescription>
+                Confira os dados do produto selecionado.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <img
@@ -76,12 +83,18 @@ const Checkout = () => {
               />
               <div>
                 <p className="text-sm text-muted-foreground">Livro</p>
-                <h1 className="text-2xl font-serif text-foreground">{book.title}</h1>
-                <p className="text-sm text-muted-foreground">{book.author}</p>
+                <h1 className="text-2xl font-serif text-foreground">
+                  {book.title}
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  {book.author}
+                </p>
               </div>
               <div className="border-t pt-4 flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">Total</span>
-                <strong className="text-2xl text-primary">{formatPrice(book.price)}</strong>
+                <strong className="text-2xl text-primary">
+                  {formatPrice(book.price)}
+                </strong>
               </div>
             </CardContent>
           </Card>
@@ -89,14 +102,30 @@ const Checkout = () => {
           <Card>
             <CardHeader>
               <CardTitle>Forma de pagamento</CardTitle>
-              <CardDescription>Escolha uma opção para finalizar a compra.</CardDescription>
+              <CardDescription>
+                Escolha uma opção para finalizar a compra.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <RadioGroup value={paymentMethod} onValueChange={(value) => setPaymentMethod(value as typeof paymentMethod)}>
+              <RadioGroup
+                value={paymentMethod}
+                onValueChange={(value) =>
+                  setPaymentMethod(value as typeof paymentMethod)
+                }
+              >
                 {paymentOptions.map((option) => (
-                  <div key={option.value} className="flex items-center space-x-3 rounded-md border p-3">
-                    <RadioGroupItem value={option.value} id={option.value} />
-                    <Label htmlFor={option.value} className="cursor-pointer">
+                  <div
+                    key={option.value}
+                    className="flex items-center space-x-3 rounded-md border p-3"
+                  >
+                    <RadioGroupItem
+                      value={option.value}
+                      id={option.value}
+                    />
+                    <Label
+                      htmlFor={option.value}
+                      className="cursor-pointer"
+                    >
                       {option.label}
                     </Label>
                   </div>
@@ -105,23 +134,44 @@ const Checkout = () => {
 
               <Button
                 className="w-full"
-                onClick={() => {
-                  toast({
-                    title: "Pedido criado com sucesso",
-                    description: `Pagamento via ${selectedPaymentLabel}. Em produção, aqui chamamos a API para gerar a cobrança.`,
-                  });
+                disabled={isSubmitting}
+                onClick={async () => {
+                  try {
+                    setIsSubmitting(true);
+
+                    const result = await createOrder({
+                      bookId: book.id,
+                      paymentMethod,
+                      amount: book.price,
+                    });
+
+                    toast({
+                      title: "Pedido criado com sucesso",
+                      description: `Pedido ${result.orderId} criado com pagamento via ${selectedPaymentLabel}.`,
+                    });
+                  } catch {
+                    toast({
+                      title: "Falha ao criar pedido",
+                      description:
+                        "Configure seu backend e a variável VITE_API_BASE_URL.",
+                      variant: "destructive",
+                    });
+                  } finally {
+                    setIsSubmitting(false);
+                  }
                 }}
               >
-                Finalizar compra
+                {isSubmitting ? "Processando..." : "Finalizar compra"}
               </Button>
 
               <div className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
                 <p className="font-medium text-foreground inline-flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
-                  Próximo passo para pagamento real
+                  Próximo passo
                 </p>
                 <p className="mt-2">
-                  Integre este botão com seu backend para criar o pedido e iniciar o pagamento (Pix, cartão ou boleto) no seu provedor escolhido.
+                  Integre este fluxo com seu backend para persistir o pedido no
+                  PostgreSQL e iniciar o pagamento.
                 </p>
               </div>
             </CardContent>

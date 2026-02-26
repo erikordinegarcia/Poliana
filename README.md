@@ -71,3 +71,16 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Checkout e banco de dados (PostgreSQL)
+
+- Script de criação das tabelas: `db/poliana_store.sql`
+- Guia de integração (pgAdmin + API): `docs/pagamentos-postgres.md`
+
+
+## Rodando com backend de checkout local
+
+1. Crie `.env.backend` com variáveis de conexão PostgreSQL (ver `docs/pagamentos-postgres.md`).
+2. Suba a API: `source .env.backend && npm run dev:api`
+3. Crie `.env` no front com `VITE_API_BASE_URL=http://localhost:3333` (opcional em dev por causa do proxy).
+4. Suba o front: `npm run dev`
